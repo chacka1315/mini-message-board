@@ -1,17 +1,7 @@
-const messages = [
-  {
-    text: 'Hi there!',
-    user: 'Amando',
-    added: new Date(),
-  },
-  {
-    text: 'Hello World!',
-    user: 'Charles',
-    added: new Date(),
-  },
-];
+import db from '../db.js';
 
-export function indexController(req, res) {
+export async function indexController(req, res) {
   res.locals.title = 'Home';
+  const messages = await db.getAllmessages();
   res.render('pages/index', { messages });
 }
