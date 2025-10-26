@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('../partials/head') %>
+  <body>
+    <%- include('../partials/header') %>
+    <main>
+      <form method="POST" action="/new">
+        <h1>New meessage</h1>
+
+        <div>
+          <label for="user_name">Author</label>
+          <input
+            type="text"
+            id="user_name"
+            name="user_name"
+            placeholder="Your name"
+          />
+        </div>
+        <div>
+          <label for="message">Message</label>
+          <textarea
+            name="user_message"
+            id="user_message"
+            placeholder="Type your message here..."
+          ></textarea>
+        </div>
+        <button type="submit">Send<span>📨</span></button>
+      </form>
+    </main>
+    <%- include('../partials/footer') %>
+  </body>
+</html>
