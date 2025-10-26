@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('../partials/head') %>
+  <body>
+    <%- include('../partials/header') %>
+    <main>
+      <%- include('../partials/allMesg') %>
+      <% if(message)  { %>
+      <div class="singleMesage">
+        <p><%= message.user %></p>
+        <div>
+          <p><%= message.text %></p>
+          <p><%= message.added %></p>
+        </div>
+      </div>
+      <% } else { %>
+      <div class="singleMessage">
+        <p>This message doesn't exist!</p>
+      </div>
+      <% } %>
+    </main>
+    <%- include('../partials/footer') %>
+  </body>
+</html>
