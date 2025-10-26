@@ -3,12 +3,11 @@
   <%- include('../partials/head') %>
   <body>
     <%- include('../partials/header') %>
-    <main>
+    <main class="formContent">
       <form method="POST" action="/new">
         <h1>New meessage</h1>
-
         <div>
-          <label for="user_name">Author</label>
+          <label for="user_name">Name</label>
           <input
             type="text"
             id="user_name"
@@ -24,7 +23,7 @@
             placeholder="Type your message here..."
           ></textarea>
         </div>
-        <button type="submit">Send<span>📨</span></button>
+        <button type="submit">Send🚀</button>
       </form>
     </main>
     <%- include('../partials/footer') %>

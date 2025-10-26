@@ -10,5 +10,6 @@
   />
 
   <link rel="stylesheet" href="/styles.css" />
-  <title>Miniboard | <!= title || '' !></title>
+  <% const pageTitle = locals.title || '' %>
+  <title>MMboard | <%= pageTitle %></title>
 </head>
