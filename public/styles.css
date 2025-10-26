@@ -1,0 +1,246 @@
+/* styles reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    interpolate-size: allow-keywords;
+  }
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+p {
+  text-wrap: pretty;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+#root,
+#__next {
+  isolation: isolate;
+}
+
+:root {
+  --primary: #bf225a;
+  --secondary: rgb(43, 40, 40);
+  --tertiary: #f1f1f2;
+  --forth: #fff;
+}
+/* general styles */
+body {
+  font-family:
+    'Lexend',
+    -apple-system,
+    system-ui,
+    'Segoe UI',
+    sans-serif;
+  font-family: 'system-ui';
+  font-size: 20px;
+  color: var(--forth);
+  background-color: var(--tertiary);
+  min-height: 100vh;
+  overflow: hidden;
+  display: grid;
+  grid-template-rows: 50px calc(100vh - 130px) 80px;
+}
+
+/* haeder */
+header {
+  padding-left: 100px;
+  background-color: var(--primary);
+}
+header a {
+  color: var(--forth);
+  text-decoration: none;
+  background-color: var(--primary);
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100%;
+  gap: 50px;
+}
+
+/* content */
+main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  padding: 0px 0px;
+}
+
+.allMessages,
+.singleMesEmpty,
+.singleMessage,
+.noMessage {
+  background-color: var(--secondary);
+  padding: 10px;
+  overflow: auto;
+}
+
+.singleMessage,
+.messageView {
+  padding: 20px;
+}
+
+.singleMessage {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.user {
+  font-weight: 600;
+}
+
+.date {
+  font-size: 14px;
+  font-style: italic;
+  font-weight: 500;
+}
+.singleMessage .date {
+  text-align: right;
+}
+
+.singleMessage .user {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.singleMessage .user svg {
+  width: 50px;
+  min-width: 50px;
+  height: auto;
+  fill: var(--forth);
+}
+.message-card a {
+  display: flex;
+  flex-direction: column;
+  color: var(--forth);
+  padding: 10px;
+  text-decoration: none;
+}
+
+.message-card .user {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.message-card .date {
+  text-align: right;
+}
+
+.noMessage,
+.singleMesEmpty {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.noMessage p {
+  font-style: italic;
+}
+.message-card .text {
+  margin-top: 5px;
+  padding-left: 5px;
+}
+
+.message-card svg {
+  width: 30px;
+  min-width: 30px;
+  height: auto;
+  fill: var(--forth);
+}
+
+.formContent {
+  display: flex;
+  justify-content: center;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  padding: 0 80px;
+  gap: 20px;
+  background-color: var(--secondary);
+  width: 50%;
+  margin: 20px 0;
+  overflow: auto;
+}
+
+form div {
+  display: flex;
+  flex-direction: column;
+}
+
+form h1 {
+  align-self: center;
+}
+form button {
+  align-self: center;
+  width: 150px;
+  background-color: var(--primary);
+  border: var(--primary);
+  border-radius: 2px;
+  cursor: pointer;
+  color: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 5px;
+  margin-top: 50px;
+}
+/* footer */
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--primary);
+  color: var(--forth);
+}
