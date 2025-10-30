@@ -1,4 +1,4 @@
-import db from '../db.js';
+import db from '../db/queries.js';
 import NotFoundError from '../errors/NotFoundError.js';
 
 export async function messageController(req, res) {

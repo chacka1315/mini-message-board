@@ -1,4 +1,4 @@
-import db from '../db.js';
+import db from '../db/queries.js';
 
 export async function indexController(req, res) {
   res.locals.title = 'Home';
