@@ -9,7 +9,9 @@ async function formatDate(rows) {
 }
 
 async function getAllmessages() {
-  const { rows } = await pool.query('SELECT * FROM messages');
+  const { rows } = await pool.query(
+    'SELECT * FROM messages ORDER BY added DESC',
+  );
   const data = await formatDate(rows);
   return data;
 }
