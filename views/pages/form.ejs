@@ -12,6 +12,7 @@
             type="text"
             id="user_name"
             name="user_name"
+            value="<%= message.user_name %>"
             placeholder="Your name"
           />
         </div>
@@ -21,8 +22,11 @@
             name="user_message"
             id="user_message"
             placeholder="Type your message here..."
-          ></textarea>
+          >
+<%= message.user_message %>
+          </textarea>
         </div>
+        <%- include('../partials/errors') %>
         <button type="submit">Send🚀</button>
       </form>
     </main>
