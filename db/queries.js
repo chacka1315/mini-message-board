@@ -23,9 +23,13 @@ async function getMessage(messageId) {
 }
 
 async function addMessage(message) {
-  const query = `INSERT INTO messages (text, added, username) VALUES ($1, $2, $3)`;
-  const values = [message.text, message.added, message.username];
+  const query = `INSERT INTO messages (text, username) VALUES ($1, $2)`;
+  const values = [message.text, message.username];
   await pool.query(query, values);
 }
 
-export default { getAllmessages, addMessage, getMessage };
+async function deleteMessage(messageId) {
+  const query = `DELETE FROM messages WHERE id = $1`;
+  await pool.query(query, [messageId]);
+}
+export default { getAllmessages, addMessage, getMessage, deleteMessage };
